@@ -27,6 +27,7 @@ public class BookOfIllusions extends MouseAdapter {
 	JLabel label2 = new JLabel();
 	String two = "image 2.jpg";
 	boolean bool = true;
+	String one = "image 1.jpg";
 	private void createBook() {
 		// 2. make the frame visible
 		frame.setVisible(true);
@@ -34,7 +35,7 @@ public class BookOfIllusions extends MouseAdapter {
 		frame.setSize(200, 200);
 		// 4. find 2 images and save them to your project’s default package
 		// 5. make a variable to hold the location of your image. e.g. "illusion.jpg"
-		String one = "image 1.jpg";
+		
 		
 		// 6. create a variable of type "JLabel" but don’t initialize it yet
 	
@@ -49,15 +50,29 @@ public class BookOfIllusions extends MouseAdapter {
 	}
 
 	public void mousePressed(MouseEvent e) {
-		// 11. Print "clicked!" to the console when the mouse is pressed
-		System.out.println("clicked!");
-		// 12. remove everything from the frame that was added earlier
-		frame.remove(label1);
-		// 13. load a new image like before (this is more than one line of code)
-		label2 = loadImageFromComputer(two);
-		frame.add(label2);
-		// 14. pack the frame
-		frame.pack();
+		if(bool == true){
+			// 11. Print "clicked!" to the console when the mouse is pressed
+			System.out.println("clicked!");
+			// 12. remove everything from the frame that was added earlier
+			frame.remove(label1);
+			// 13. load a new image like before (this is more than one line of code)
+			label2 = loadImageFromComputer(two);
+			frame.add(label2);
+			// 14. pack the frame
+			frame.pack();
+		}
+		else{
+			// 11. Print "clicked!" to the console when the mouse is pressed
+			System.out.println("clicked!");
+			// 12. remove everything from the frame that was added earlier
+			frame.remove(label2);
+			// 13. load a new image like before (this is more than one line of code)
+			label1 = loadImageFromComputer(one);
+			frame.add(label1);
+			// 14. pack the frame
+			frame.pack();
+		}
+		bool = !bool;
 	}
 
 	// [OPTIONAL] 15. goad your users with some annoying or witty pop-ups
