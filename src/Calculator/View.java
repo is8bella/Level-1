@@ -13,20 +13,21 @@ public class View {
 	JPanel panel = new JPanel();
 	JLabel label = new JLabel();
 	
-	JButton button0 = new JButton("0");
-	JButton button1 = new JButton("1");
-	JButton button2 = new JButton("2");
-	JButton button3 = new JButton("3");
-	JButton button4 = new JButton("4");
-	JButton button5 = new JButton("5");
-	JButton button6 = new JButton("6");
+
 	JButton button7 = new JButton("7");
 	JButton button8 = new JButton("8");
 	JButton button9 = new JButton("9");
-	JButton buttonx = new JButton("x");
 	JButton buttondiv = new JButton("/");
-	JButton buttonsub = new JButton("-");
+	JButton button4 = new JButton("4");
+	JButton button5 = new JButton("5");
+	JButton button6 = new JButton("6");
+	JButton buttonx = new JButton("x");
+	JButton button1 = new JButton("1");
+	JButton button2 = new JButton("2");
+	JButton button3 = new JButton("3");
 	JButton buttonplus = new JButton("+");
+	JButton buttonsub = new JButton("-");
+	JButton button0 = new JButton("0");
 	JButton buttonclear = new JButton("c");
 	JButton buttonequals = new JButton("=");
 	
@@ -34,6 +35,19 @@ public class View {
 	JLabel label2 = new JLabel("");
 	JLabel label3 = new JLabel("");
 	JLabel label4 = new JLabel("");
+	
+	void viewSetLabel(String num){
+		label1.setText(num);
+	}
+	void viewSetLabel2(String num){
+		label2.setText(num);
+	}
+	void viewSetLabel3(String num){
+		label3.setText(num);
+	}
+	void viewSetLabel4(String num){
+		label4.setText(num);
+	}
 	
 	public View(){
 		frame.setVisible(true);
@@ -45,22 +59,24 @@ public class View {
 		panel.add(label2);
 		panel.add(label3);
 		panel.add(label4);
-		panel.add(button0);
-		panel.add(button1);
-		panel.add(button2);
-		panel.add(button3);
-		panel.add(button4);
-		panel.add(button5);
-		panel.add(button6);
 		panel.add(button7);
 		panel.add(button8);
 		panel.add(button9);
-		panel.add(buttonx);
 		panel.add(buttondiv);
+		panel.add(button4);
+		panel.add(button5);
+		panel.add(button6);
+		panel.add(buttonx);
+		panel.add(button1);
+		panel.add(button2);
+		panel.add(button3);
 		panel.add(buttonsub);
 		panel.add(buttonclear);
+		panel.add(button0);
 		panel.add(buttonequals);
 		panel.add(buttonplus);
+
+	
 	}
 	void addListeners(){
 		button1.addActionListener(new Controller());
