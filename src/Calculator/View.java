@@ -94,6 +94,7 @@ public class View {
 		buttonsub.addActionListener(new Controller());
 		buttonclear.addActionListener(new Controller());
 		buttonplus.addActionListener(new Controller());
+		buttonequals.addActionListener(new Controller());
 	}
 	
 }
